@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System</title>
+
+    <link rel="stylesheet" href="login.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+
+        <div class="logo">
+            <h2>🎓 SMS</h2>
+        </div>
+
+        <ul>
+
+            <li class="active">
+                <a href="#"><i class="fa-solid fa-house"></i> Dashboard</a>
+            </li>
+
+            <li>
+                <a href="#"><i class="fa-solid fa-user-graduate"></i> Students</a>
+            </li>
+
+            <li>
+                <a href="#"><i class="fa-solid fa-user-plus"></i> Add Student</a>
+            </li>
+
+            <li>
+                <a href="#"><i class="fa-solid fa-magnifying-glass"></i> Search</a>
+            </li>
+
+            <li>
+                <a href="#"><i class="fa-solid fa-gear"></i> Settings</a>
+            </li>
+
+        </ul>
+
+    </div>
+
+    <!-- Main -->
+    <div class="main">
+
+        <header>
+
+            <h1>Student Management System</h1>
+
+            <button id="themeBtn">
+                🌙 Dark Mode
+            </button>
+
+        </header>
+
+        <!-- Dashboard Cards -->
+        <div class="cards">
+
+            <div class="card blue">
+                <h3>Total Students</h3>
+                <h1 id="total">0</h1>
+            </div>
+
+            <div class="card green">
+                <h3>Courses</h3>
+                <h1>5</h1>
+            </div>
+
+            <div class="card orange">
+                <h3>Active</h3>
+                <h1 id="active">0</h1>
+            </div>
+
+            <div class="card red">
+                <h3>Teachers</h3>
+                <h1>20</h1>
+            </div>
+
+        </div>
+
+        <!-- Student Form -->
+        <div class="student-form">
+
+            <h2>Add Student</h2>
+
+            <input
+                type="text"
+                id="name"
+                placeholder="Student Name">
+
+                 <input
+                type="text"
+                id="course"
+                placeholder="course">
+
+               
+
+            <input
+                type="number"
+                id="age"
+                placeholder="Age">
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Email">
+
+            <input
+                type="text"
+                id="phone"
+                placeholder="Phone Number">
+
+            <input
+                type="file"
+                id="photo"
+                accept="image/*">
+
+            <button onclick="addStudent()">
+                Add Student
+            </button>
+
+        </div>
+
+        <!-- Search -->
+        <div class="search">
+
+            <input
+                type="text"
+                id="search"
+                placeholder="Search Student">
+
+        </div>
+
+        <!-- Table -->
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>Photo</th>
+                    <th>Name</th>
+                    <th>Course</th>
+                    <th>Age</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Action</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="studentList">
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
